@@ -1,0 +1,19 @@
+# Configuration for {{openvpnconnection.name}}
+proto {{protocol}}
+port {{port}}
+dev tap
+verb 3
+keepalive 15 60
+#secret config/static.key
+tls-auth {{openvpn_path}}/ta.key 0
+ca {{openvpn_path}}/ca.crt
+cert {{openvpn_path}}/server.crt
+key {{openvpn_path}}/server.key
+dh {{openvpn_path}}/dh1024.pem
+#daemon
+remote-cert-ku 80
+server {{network}} {{netmask}}
+{% for cidr in router_cidr_list
+%}
+push "route {{cidr.network}} {{cidr.netmask}}"
+{% endfor %}

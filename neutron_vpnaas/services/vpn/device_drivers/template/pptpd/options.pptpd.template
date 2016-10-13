@@ -1,0 +1,15 @@
+name {{vpnservice.id}}
+refuse-pap
+refuse-chap
+refuse-mschap
+require-mschap-v2
+require-mppe-128
+{% for dns in vpnservice.dnss %}
+ms-dns {{dns}}
+{% endfor %}
+proxyarp
+lock
+nobsdcomp
+novj
+novjccomp
+nologfd

@@ -1,0 +1,12 @@
+[console_scripts]
+neutron-vpn-agent = neutron_vpnaas.cmd.eventlet.agent:main
+neutron-vpn-netns-wrapper = neutron_vpnaas.services.vpn.common.netns_wrapper:main
+
+[device_drivers]
+neutron.services.vpn.device_drivers.cisco_ipsec.CiscoCsrIPsecDriver = neutron_vpnaas.services.vpn.device_drivers.cisco_ipsec:CiscoCsrIPsecDriver
+neutron.services.vpn.device_drivers.ipsec.OpenSwanDriver = neutron_vpnaas.services.vpn.device_drivers.ipsec:OpenSwanDriver
+neutron.services.vpn.device_drivers.vyatta_ipsec.VyattaIPsecDriver = neutron_vpnaas.services.vpn.device_drivers.vyatta_ipsec:VyattaIPsecDriver
+
+[neutron.db.alembic_migrations]
+neutron-vpnaas = neutron_vpnaas.db.migration:alembic_migrations
+

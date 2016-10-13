@@ -1,0 +1,3 @@
+logwtmp
+localip {{vpnservice.localip}}
+remoteip {{vpnservice.remoteip}}

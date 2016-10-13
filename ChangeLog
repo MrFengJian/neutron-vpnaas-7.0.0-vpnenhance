@@ -1,0 +1,877 @@
+CHANGES
+=======
+
+7.0.0
+-----
+
+* Add testresources used by oslo.db fixture
+
+7.0.0.0rc2
+----------
+
+* Tag the alembic migration revisions for Liberty
+* Use stable/liberty branch for neutron dep
+
+7.0.0.0rc1
+----------
+
+* Update defaultbranch in .gitreview to stable/liberty
+* Updated from global requirements
+* VPNaaS Scenario tests using Rally
+* Make chown rootwrap filter ipsec.secrets file specific
+* tox.ini: switch to --subproject for check-migration
+* Added +x permission to gate hook scripts
+* Exclude neutron_vpnaas/tests from coverage report
+* [OpenSwan] Enable usage of the MTU value of an IPSec connection
+* Use ping assertions from net_utils in test_scenario
+* VPNaaS: Restore coverage operation
+* Set owner to root for ipsec.secrets for LibreSwan
+* Support VPNaaS with L3 HA
+* Updated from global requirements
+* Support for VPN functional tests on Neutron commits
+* Fix AH-ESP transform protocol in IPSec Policy
+* Manage cleanup of .ctl/.pid files for LibreSwan
+* Implement ModelMigrationSyncTest
+* Drop for 'tenant_id' column for 'cisco_csr_identifier_map' table
+
+7.0.0.0b3
+---------
+
+* VPNaaS: DevRef for multiple local subnets
+* Remove fall-back logic to service provider registration
+* Adopt the migration chaining and branch names from neutron
+* Explictly set file mode on IPSec pre-shared key files
+* Removing unused dependency: discover
+* Allow enabling detailed logging for OpenSwan
+* VPNaaS: Use new service name for devstack plugin
+* Fix UT fallout
+* Switch to using os-testr's copy of subunit2html
+* VPNaaS: Splitting out models from database class
+* Register provider configuration with ServiceTypeManager
+* Fix stale module import
+* [DevStack] Fix StrongSwan setup on Fedora
+* Add cisco_csr_rest_client.py module for py34 support
+* Add test_cisco_ipsec.py module for py34 support
+* Updated from global requirements
+* Revert "Remove default service provider from conf file"
+* Rename a test method in test_ipsec.py
+* Remove default service provider from conf file
+* Killed existing downgrade rules in migration scripts
+* script.py.mako: added license header and missing branch_labels
+* Add test_netns_wrapper.py module for py34 support
+* Use oslo.log library instead of system logging module
+* Updated from global requirements
+* VPNaaS: Store local side's tunnel IP for later retrieval
+* Don't include encryption algorithm in phase2alg for the AH protocol
+* py34: Enable initial python34 testing for VPNaaS
+* VPNaaS: Correcting method name for functional test
+
+7.0.0.0b2
+---------
+
+* py34: Fix usage of gettext.install
+* Register alembic_migrations at install time
+* Updated from global requirements
+* StrongSwanProcess: redefine DIALECT_MAP at class level
+* migrations: rearrange the tree to support split migration phases
+* Remove quantum untracked files from .gitignore
+* adopt neutron.common.utils.ensure_dir
+* Revert "VPNaaS: Temporarily disable check_migration"
+* VPNaaS: Enable devstack plugin for tests
+* VPNaaS DevStack Plugin support
+* VPNaaS: Temporarily disable check_migration
+* Scenario test for vpnaas: ipsec-site-connection
+* Remove dependency on config file for db check_migration
+* Set vpn agent's agent_state['binary'] attribute
+* VPNaaS: Fix migration head
+* VPNaaS: Don't clone neutron automatically for tests
+* COMMON_PREFIXES cleanup - patch 4/5
+* Updated from global requirements
+* VPNaaS: Fix another import due to Neutron change
+* Fix breakage due to recent movements of Neutron modules
+* Switch to oslo.service
+* Updated from global requirements
+
+7.0.0.0b1
+---------
+
+* Use DvrEdgeRouter instead of decomposed DvrRouter in test_ipsec
+* Switch to oslo_utils.uuidutils
+* Trim some unused test requirements
+* Update version for Liberty
+
+7.0.0a0
+-------
+
+* Updated from global requirements
+* Resize cisco_csr_identifier_map.ipsec_site_conn_id
+* Updated from global requirements
+* Updated from global requirements
+* VPNaaS: And devref doc infrastructure
+* VPNaaS: Enable pylint duplicate-key check
+* Updated from global requirements
+* Enable random hash seeds
+* Python 3: use six.iteritems instead of dict.items
+* Do not assume order of mounts in execute_with_mount
+* Set owner of Q_VPN_CONF_FILE file to STACK_USER user
+* VPNaaS: Cleanup functional hook scripts
+* gate-neutron-vpnaas-pep8 failing for test_cisco_ipsec.py
+* Assign external_ip based on ip version of peer_address
+* Switch from MySQL-python to PyMySQL
+* Updated from global requirements
+* VPNaaS: Fix breakage in status reporting
+* VPNaaS: Revise functional test hooks
+* Add neutron-vpnaas/tests/unit/extensions/__init__
+* Remove contextlib.nested from tests
+* IPv6 support for OpenSwan, Libreswan and Strongswan
+* Updated from global requirements
+* Libreswan driver support in VPNaaS
+* Updated from global requirements
+* Provide Fedora support for StrongSwan
+* Fix failures for integration tests
+
+2015.1.0
+--------
+
+* VPNaaS: Refactor functional tests to use discover
+* update .gitreview for stable/kilo
+* Add Kilo release milestone
+* Add Kilo release milestone
+* Pin neutron to stable/kilo
+* VPNService takes names of device drivers from self.conf
+* VPNaaS Remove dependency on Neutron for unit test
+
+2015.1.0rc1
+-----------
+
+* VPNaaS: Remove check for bash usage
+* VPNaaS: Reorganize test tree
+* Open Liberty development
+* VPNaaS: Refactoring to use callback mechanism
+* VPNaaS Fix unit test breakage
+* Use BaseSudoTestCase instead of BaseLinuxTestCase
+* Set ipsec connection to Error if peer fqdn can't be resolved
+* Updated from global requirements
+* Introduce Vyatta VPN agent cmd in monkey patched eventlet module
+* Add some unit tests for strongswan driver
+
+2015.1.0b3
+----------
+
+* tests: stop overwriting neutron BaseTestCase configuration files
+* Functional tests of ipsec strongswan vpnaas driver
+* IPsec strongSwan driver implemention
+* VPNaaS breakage by refactoring commit
+* Fix functional test breakage from DevStack change
+* VPNaaS: Enable StrongSwan in gate hook
+* Remove the reference for non-existent cisco.l3.plugging_drivers
+* VPNaaS: device driver and agent refactoring
+* Decouple L3 and VPN during DVR router migration
+* VPNaaS: Fixing UT breakage
+* Updating alembic HEAD file according to the current code
+* Updated from global requirements
+* VPNaaS: Fix unit test breakage
+* Fix up the import path for vyatta.common to use networking_brocade
+* Move pylint checks to pep8 testenv
+* VPNaaS: Restructure test dir layout
+* Decouple L3 and VPN service plugins during router operations
+* Migrate to oslo.log
+* Add test case for the 'Peer ID gets additional "@"' fix
+* VPNaaS refactor service driver to reuse VpnDriver code
+* Change L3 agent AdvancedService class to be non-singleton
+* Fix the ipsec conn issue when peer addr is fqdn
+* Updated from global requirements
+* Remove remaining root_helper references
+* Implementation of Brocade Vyatta VPNaaS Plugin
+* Explicitly monkey patch VPN agent
+* Add IPSec encap mode validation to Cisco VPNaas
+* VPNaaS Enable coverage testing for functional tests
+* Reorder Neutron import statements in file
+* Stop storing and passing root_helper
+* Fix breakage caused by removing deprecated root_helper config in neutron
+* Add index on tenant_id
+* Provide service info for RouterInUse exception
+* VPNaaS: Remove duplication for exception - part 1
+* VPNaaS: Enable coverage tests
+* Fixed tests to use neutron_vpnaas extensions and neutrons
+* oslo: migrate to namespace-less import paths
+
+2015.1.0b2
+----------
+
+* Updated from global requirements
+* Move config and extensions to service repo
+* Provide hooks for VPNaaS repo functional gate
+* Pass root_helper to ip_lib by keyword argument to prep for removal
+* Handle common boilerplate arguments to RouterInfo
+* Fix the neutron-vpnaas unit test failures
+* Updated from global requirements
+* Updated from global requirements
+* vpn namespace wrapper
+* Updated from global requirements
+* Migrate to oslo.concurrency
+* Updated from global requirements
+* Update hacking to 0.10
+* Updated from global requirements
+* Adapt VPN agent to use new main for L3 Agent
+* Updated from global requirements
+* VPNaaS: Remove unneeded metaclass decorator
+* Fix VPN Service for Distributed Routers
+* Backward compatibility for vpnaas
+* Moved vpnaas.filters from main neutron repo
+* Cleaned up requirements.txt
+* Bump from global requirements
+* Added __init__.py so migrations can work
+* Fix gitignore of egg files properly
+* Do not list neutron in requirements.txt
+* VPNaas: L3 Agent restructure - observer hierarchy
+* VPNaaS: Unit tests using policy.conf
+* Update documentation files for VPNaaS
+
+2015.1.0b1
+----------
+
+* Do not restart vpn processes for every router update
+* VPNaaS: Advanced Services split - unit tests
+* Kill oslo-incubator files
+* tests: initialize admin context after super().setUp call
+* Init separate alembic migration chain
+* Remove erroneously commited egg files
+* Move classes out of l3_agent.py
+* Fix python neutron path for neutron_vpnaas
+* After the services split, get neutron-vpnaas Jenkins jobs passing
+* Point gitreview at correct repo
+* Split vpnaas services code into neutron-vpnaas
+* Workflow documentation is now in infra-manual
+* tox.ini: Prevent casual addition of bash dependency
+* Updated from global requirements
+* Convert several uses of RpcCallback
+* Get rid of py26 references: OrderedDict, httplib, xml testing
+* Updated the README.rst
+* pretty_tox.sh: Portablity improvement
+* test_dhcp_agent: Fix no-op tests
+* Enable undefined-loop-variable pylint check
+* Fix incorrect exception order in _execute_request
+* Migrate to oslo.i18n
+* Migrate to oslo.middleware
+* Migrate to oslo.utils
+* Remove Python 2.6 classifier
+* Remove ryu plugin
+* Updated from global requirements
+* Drop RpcProxy usage from VPNaaS code
+* Show progress output while running unit tests
+* enable H401 hacking check
+* enable H237 check
+* Updated from global requirements
+* Drop several uses of RpcCallback
+* Updated from global requirements
+* Update i18n translation for neutron.agents log msg's
+* enable F812 check for flake8
+* enable F811 check for flake8
+* Support pudb as a different post mortem debugger
+* switch to oslo.serialization
+* Add rootwrap filters for ofagent
+* Cisco VPNaaS and L3 router plugin integration
+* Remove openvswitch core plugin entry point
+* Updated from global requirements
+* Purge use of "PRED and A or B" poor-mans-ternary
+* Remove use_namespaces from RouterInfo Property
+* Updated from global requirements
+* Remove XML support
+* enable F402 check for flake8
+* enable E713 in pep8 tests
+* Hyper-V: Remove useless use of "else" clause on for loop
+* Enable no-name-in-module pylint check
+* Move disabling of metadata and ipv6_ra to _destroy_router_namespace
+* Updated from global requirements
+* Remove duplicate import of constants module
+* Switch run-time import to using importutils.import_module
+* Enable assignment-from-no-return pylint check
+* tox.ini: Avoid using bash where unnecessary
+* Empty files should not contain copyright or license
+* Remove single occurrence of lost-exception warning
+* Updated fileutils and its dependencies
+* VPNaaS Cisco unit test clean-up
+* remove E251 exemption from pep8 check
+* Update VPN logging to use new i18n functions
+* mock.assert_called_once() is not a valid method
+* Check for VPN Objects when deleting interfaces
+* Add pylint tox environment and disable all existing warnings
+* Updated from global requirements
+* Ignore top-level hidden dirs/files by default
+* Avoid constructing a RouterInfo object to get namespace name
+* Drop sslutils and versionutils modules
+* Refactor _process_routers to handle a single router
+* Remove all_routers argument from _process_routers
+* Removed kombu from requirements
+* Updated from global requirements
+* Updated from global requirements
+* Remove sslutils from openstack.common
+* Fix setup of Neutron core plugin in VPNaaS UT
+* remove linuxbridge plugin
+* Open Kilo development
+* Implement ModelsMigrationsSync test from oslo.db
+* Do not assume order of report list elements
+* Fix entrypoint of OneConvergencePlugin plugin
+* Rework and enable VPNaaS UT for Cisco CSR REST
+* Set dsvm-functional job to use system packages
+* Separate Configuration from Freescale SDN ML2 mechanism Driver
+* Remove @author(s) from copyright statements
+* Add HA support to the l3 agent
+* Updated from global requirements
+* Adds ipset support for Security Groups
+* UTs: Disable auto deletion of ports/subnets/nets
+* Add requests_mock to test-requirements.txt
+* Removed kombu from requirements
+* Supply missing cisco_cfg_agent.ini file
+* Updated from global requirements
+* Work toward Python 3.4 support and testing
+* Revert "Cisco DFA ML2 Mechanism Driver"
+* Big Switch: Separate L3 functions into L3 service
+* Remove reference to cisco_cfg_agent.ini from setup.cfg again
+* Adds router service plugin for CSR1kv
+* Support for extensions in ML2
+* Cisco DFA ML2 Mechanism Driver
+* Adding mechanism driver in ML2 plugin for Nuage Networks
+* Fix state_path in tests
+* Remove ovs dependency in embrane plugin
+* Use lockutils module for tox functional env
+* Cisco VPN with in-band CSR (interim solution)
+* Inline "for val in [ref]" statements
+* Updated from global requirements
+* VPNaaS: Enable UT cases with newer oslo.messaging
+* Add specific docs build option to tox
+* Fix bigswitch setup.cfg lines
+* Remove auto-generation of db schema from models at startup
+* Updated from global requirements
+* Use jsonutils instead of stdlib json
+* VPNaaS: Cisco fix validation for GW IP
+* Opencontrail plug-in implementation for core resources
+* Do not assume order of new_peers list elements
+* Remove redundant topic from rpc calls
+* Add a tox test environment for random hashseed testing
+* Updated from global requirements
+* Move Cisco VPN RESTapi URI strings to constants
+* Remove reference to cisco_cfg_agent.ini from setup.cfg
+* Exit Firewall Agent if config is invalid
+* Fix spelling mistakes
+* Removed configobj from test requirements
+* Updated from global requirements
+* Functional tests work fine with random PYTHONHASHSEED
+* Set python hash seed to 0 in tox.ini
+* Configuration agent for Cisco devices
+* Updated from global requirements
+* Define some abstract methods in VpnDriver class
+* ML2 mechanism driver for SR-IOV capable NIC based switching, Part 2
+* Modify L3 Agent for Distributed Routers
+* This patch changes the name of directory from mech_arista to arista
+* ML2 mechanism driver for SR-IOV capable NIC based switching, Part 1
+* Allow to import _LC, _LE, _LI and _LW functions directly
+* Make readme reference git.openstack.org not github
+* VPNaaS: Separate validation for Cisco impl
+* VPNaaS: separate out validation logic for ref impl
+* VPNaaS Cisco REST client enhance CSR create
+* Bump hacking to version 0.9.2
+* Use auth_token from keystonemiddleware
+* Change all occurences of no_delete to do_delete
+* Revert "VPNaaS REST Client UT Broken"
+* Extract CommonDBMixin to a separate file
+* Remove reference to setuptools_git
+* Add a gate-specific tox env for functional tests
+* Add CONTRIBUTING.rst
+* Updated from global requirements
+* VPNaaS REST Client UT Broken
+* Updated from global requirements
+* Updated from global requirements
+* Fix example for running individual tests
+* Switch to using of oslo.db
+* remove unsupported middleware
+* Add config for performance gate job
+* Synced log module and its dependencies from olso-incubator
+* don't ignore rules that are already enforced
+* Moved rpc_compat.py code back into rpc.py
+* Updated from global requirements
+* Updated from global requirements
+* ofagent: move main module from ryu repository
+* Remove the useless vim modelines
+* Removed 'rpc' and 'notifier' incubator modules
+* Removed create_rpc_dispatcher methods
+* Use openstack.common.lockutils module for locks in tox functional tests
+* Renamed consume_in_thread -> consume_in_threads
+* Port to oslo.messaging
+* Pass 'top' to remove_rule so that rule matching succeeds
+* Updated from global requirements
+* Ignore emacs checkpoint files
+* Added missing core_plugins symbolic names
+* Introduced rpc_compat.create_connection()
+* Introduce RpcCallback class
+* remove pep8 E122 exemption and correct style
+* remove E112 hacking exemption and fix errors
+* Updated from global requirements
+* Added RpcProxy class
+* Freescale SDN Mechanism Driver for ML2 Plugin
+* Remove run-time version checking for openvswitch features
+* Added missing plugin .ini files to setup.cfg
+* Updated from global requirements
+* Synced jsonutils from oslo-incubator
+* Cisco APIC ML2 mechanism driver, part 2
+* NSX: get rid of the last Nicira/NVP bits
+* Metaclass Python 3.x Compatibility
+* Add missing translation support
+* Add mailmap entry
+* Updated from global requirements
+* Remove explicit dependency on amqplib
+* Remove duplicate module-rgx line in .pylintrc
+* Fix H302 violations
+* Fix H302 violations in unit tests
+* Cisco VPN device driver - support IPSec connection updates
+* Updated from global requirements
+* Fix H302 violations in db package and services
+* Updated from global requirements
+* Support enhancements to Cisco CSR VPN REST APIs
+* Exclude .ropeproject from flake8 checks
+* Enable flake8 E711 and E712 checking
+* Updated from global requirements
+* Sync service and systemd modules from oslo-incubator
+* Move bash whitelisting to pep8 testenv
+* Fix Jenkins translation jobs
+* Set ns_name in RouterInfo as attribute
+* ignore build directory for pep8
+* Enable hacking H301 check
+* Updated from global requirements
+* Remove last parts of Quantum compatibility shim
+* UT: do not hide an original error in test resource ctxtmgr
+* Open Juno development
+* Start using oslosphinx theme for docs
+* Cisco VPN driver correct reporting for admin state chg
+* Updated from global requirements
+* VPNaaS support for VPN service admin state change and reporting
+* add HEAD sentinel file that contains migration revision
+* Fix usage of save_and_reraise_exception
+* Cisco VPN device driver post-merge cleanup
+* Bugfix and refactoring for ovs_lib flow methods
+* Removes calls to mock.patch.stopall in unit tests
+* VPNaaS Device Driver for Cisco CSR
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* One Convergence Neutron Plugin l3 ext support
+* One Convergence Neutron Plugin Implementation
+* BigSwitch: Add SSL Certificate Validation
+* VPNaaS Service Driver for Cisco CSR
+* Updated from global requirements
+* Add OpenDaylight ML2 MechanismDriver
+* Implementaion of Mechanism driver for Brocade VDX cluster of switches
+* Implement Mellanox ML2 MechanismDriver
+* Support advanced NVP IPsec VPN Service
+* Implement OpenFlow Agent mechanism driver
+* Finish off rebranding of the Nicira NVP plugin
+* BigSwitch: Add agent to support neutron sec groups
+* Adds the new IBM SDN-VE plugin
+* Updated from global requirements
+* Update License Headers to replace Nicira with VMware
+* Developer documentation
+* tests/service: consolidate setUp/tearDown logic
+* options: consolidate options definitions
+* Rename Neutron core/service plugins for VMware NSX
+* Updated from global requirements
+* Fix VPN agent does not handle multiple connections per vpn service
+* Sync minimum requirements
+* Copy cache package from oslo-incubator
+* tests/unit: Initialize core plugin in TestL3GwModeMixin
+* Fix typo in service_drivers.ipsec
+* Remove dependent module py3kcompat
+* Use save_and_reraise_exception when reraise exception
+* Add migration support from agent to NSX dhcp/metadata services
+* Remove psutil dependency
+* LBaaS: move agent based driver files into a separate dir
+* mailmap: update .mailmap
+* Return request-id in API response
+* Prepare for multiple cisco ML2 mech drivers
+* Support building wheels (PEP-427)
+* Use oslo.rootwrap library instead of local copy
+* Enables BigSwitch/Restproxy ML2 VLAN driver
+* Add an explicit tox job for functional tests
+* Base ML2 bulk support on the loaded drivers
+* Enable hacking H233 rule
+* Update RPC code from oslo
+* Configure plugins by name
+* Update lockutils and fixture in openstack.common
+* Rename nicira configuration elements to match new naming structure
+* Remove unused imports
+* Rename check_nvp_config utility tool
+* Corrects broken format strings in check_i18n.py
+* Updates tox.ini to use new features
+* Updated from global requirements
+* Sync global requirements to pin sphinx to sphinx>=1.1.2,<1.2
+* validate if the router has external gateway interface set
+* Add fwaas_driver.ini to setup.cfg
+* Add vpnaas and debug filters to setup.cfg
+* Fix misspells
+* update error msg for invalid state to update vpn resources
+* Updates .gitignore
+* Update Zhenguo Niu's mailmap
+* Replace stubout with fixtures
+* Ensure get_pid_to_kill works with rootwrap script
+* Apply six for metaclass
+* Updated from global requirements
+* Cleanup HACKING.rst
+* Fix import log_handler error with publish_errors set
+* Updated from global requirements
+* Updated from global requirements
+* Fix incorrect indentations found by Pep 1.4.6+
+* Cleanup and make HACKING.rst DRYer
+* Add support for managing async processes
+* Use L3 api from vpn ipsec driver via service plugin
+* Fix access to lifetime dict in update_ipsecpolicy method
+* Remove obsolete redhat-eventlet.patch
+* Enable Quota DB driver by default
+* Open Icehouse development
+* Updated from global requirements
+* Require oslo.config 1.2.0 final
+* Use built-in print() instead of print statement
+* Increase size of peer_address attribute in VPNaaS
+* Add router ownership check on vpnservice creation
+* Fix error code for deletion of router which is in use by vpnservice
+* Add l2 population base classes
+* Adds support for L3 routing/NAT as a service plugin
+* Fix message i18n error
+* Install metering_agent.ini and vpn_agent.ini
+* fix conversion type missing
+* Ensure unit tests do not let looping calls roam freely
+* Enclose command args in with_venv.sh
+* ML2 Mechanism Driver for Cisco Nexus
+* Reference driver implementation (IPsec) for VPNaaS
+* Verify MTU is valid for ipsec_site_connection
+* Implement ML2 port binding
+* Arista ML2 Mechanism driver
+* ML2 Mechanism Driver for Tail-f Network Control System (NCS)
+* Default to not capturing log output in tests
+* Make ipsec_site_connection dpd_timeout == dpd_interval return 400
+* Add Neutron l3 metering agent
+* Update mailmap
+* Fix wrong example in HACKING.rst
+* Bumps hacking to 0.7.0
+* remove binaries under bin
+* Fixes Windows setup dependency bug
+* Restore Babel to requirements.txt
+* Remove DHCP lease logic
+* Remove last vestiges of nose
+* Updated from global requirements
+* Ignore pbr*.egg directory
+* Fix H102, H103 Apache 2.0 license hacking check error
+* Remove openstack.common.exception usage
+* Adds Babel dependency missing from 555d27c
+* Fix the alphabetical order in requirement files
+* VPNaaS datamodel IKEPolicy lifetime unit typo
+* Remove comments from requirements.txt (workaround pbr bug)
+* VPN as a Service (VPNaaS) API and DataModel
+* remove netifaces dependency of ryu-agent
+* Add gre tunneling support for the ML2 plugin
+* Add VXLAN tunneling support for the ML2 plugin
+* xenapi - rename quantum to neutron
+* Fix issue with pip installing oslo.config-1.2.0
+* Initial Modular L2 Mechanism Driver implementation
+* Add cover/ to .gitignore
+* fix some missing change from quantum to neutron
+* git remove old non-working packaging files
+* Rename Quantum to Neutron
+* Rename quantum to neutron in .gitreview
+* Sync install_venv_common from oslo
+* Update to use OSLO db
+* Require greenlet 0.3.2 (or later)
+* Remove single-version-externally-managed in setup.cfg
+* Fix single-version-externally-mananged typo in setup.cfg
+* Allow use of lowercase section names in conf files
+* Require pbr 0.5.16 or newer
+* Update to the latest stevedore
+* Rename agent_loadbalancer directory to loadbalancer
+* Remove unit tests that are no longer run
+* Update with latest OSLO code
+* Remove explicit distribute depend
+* Fix and enable H90x tests
+* Remove generic Exception when using assertRaises
+* Add *.swo/swp to .gitignore
+* python3: Introduce py33 to tox.ini
+* Rename README to README.rst
+* Rename requires files to standard names
+* Initial Modular L2 plugin implementation
+* Revert dependency on oslo.config 1.2.0
+* Perform a sync with oslo-incubator
+* Require oslo.config 1.2.0a2
+* update mailmap
+* Revert "Fix ./run_tests.sh --pep8"
+* Move to pbr
+* Docstrings formatted according to pep257
+* relax amqplib and kombu version requirements
+* Fix ./run_tests.sh --pep8
+* blueprint mellanox-quantum-plugin
+* Update flake8 pinned versions
+* Let the cover venv run individual tests
+* Copy the RHEL6 eventlet workaround from Oslo
+* Remove locals() from strings substitutions
+* Enable automatic validation of many HACKING rules
+* Shorten the path of the nicira nvp plugin
+* Allow pdb debugging in manually-invoked tests
+* Reformat openstack-common.conf
+* Switch to flake8 from pep8
+* Parallelize quantum unit testing:
+* blueprint cisco-single-config
+* Add lbaas_agent files to setup.py
+* Add VIRTUAL_ENV key to enviroment passed to patch_tox_env
+* Pin SQLAlchemy to 0.7.x
+* Sync latest Oslo components for updated copyright
+* drop rfc.sh
+* Replace "OpenStack LLC" with "OpenStack Foundation"
+* First havana commit
+* remove references to netstack in setup.py
+* Switch to final 1.1.0 oslo.config release
+* Update to Quantum Client 2.2.0
+* Update tox.ini to support RHEL 6.x
+* Switch to oslo.config
+* Add common test base class to hold common things
+* Pin pep8 to 1.3.3
+* Add initial testr support
+* LBaaS Agent Reference Implementation
+* Bump python-quantumclient version to 2.1.2
+* Add scheduling feature basing on agent management extension
+* Remove compat cfg wrapper
+* Unpin PasteDeploy dependency version
+* Use testtools instead of unittest or unittest2
+* Add midonet to setup.py
+* Sync latest install_venv_common.py with olso
+* Add check-nvp-config utility
+* Add unit test for ryu-agent
+* Use oslo-config-2013.1b3
+* Adds Brocade Plugin implementation
+* Synchronize code from oslo
+* PLUMgrid quantum plugin
+* Update .coveragerc
+* Allow tools/install_venv_common.py to be run from within the source directory
+* Updated to latest oslo-version code
+* Use install_venv_common.py from oslo
+* Cisco plugin cleanup
+* Use babel to generate translation file
+* Update WebOb version to >=1.2
+* Update latest OSLO
+* Adding multi switch support to the Cisco Nexus plugin
+* Adds support for deploying Quantum on Windows
+* Latest OSLO updates
+* Port to argparse based cfg
+* Add migration support to Quantum
+* Undo change to require WebOb 1.2.3, instead, require only >=1.0.8
+* .gitignore cleanup
+* Upgrade WebOb to 1.2.3
+* Logging module cleanup
+* Add OVS cleanup utility
+* Add tox artifacts to .gitignore
+* Add restproxy.ini to config_path in setup.py
+* Add script for checking i18n message
+* l3 agent rpc
+* Add metadata_agent.ini to config_path in setup.py
+* Remove __init__.py from bin/ and tools/
+* add metadata proxy support for Quantum Networks
+* Use auth_token middleware in keystoneclient
+* Add QUANTUM_ prefix for env used by quantum-debug
+* Make tox.ini run pep8 checks on bin
+* Explicitly include versioninfo in tarball
+* Import lockutils and fileutils from openstack-common
+* Updated openstack-common setup and version code
+* Ensure that the anyjson version is correct
+* Add eventlet_backdoor and threadgroup from openstack-common
+* Add loopingcall from openstack-common
+* Added service from openstack-common
+* Drop lxml dependency
+* Add uuidutils module
+* Import order clean-up
+* pin sqlalchemy to 0.7
+* Correct Intended Audience
+* Add OpenStack trove classifier for PyPI
+* Improve unit test times
+* l3_nat_agent was renamed to l3_agent and this was missed
+* Support for several HA RabbitMQ servers
+* add missing files from setup.py
+* Create .mailmap file
+* Lower webob dep from v1.2.0 to v1.0.8
+* Implements agent for Quantum Networking testing
+* Create utility to clean-up netns
+* Update rootwrap; track changes in nova/cinder
+* Execute unit tests for Cisco plugin with Quantum tests
+* Add lease expiration script support for dnsmasq
+* Add nosehtmloutput as a test dependency
+* quantum l3 + floating IP support
+* Updates pip requirements
+* NEC OpenFlow plugin support
+* remove old gflags config code
+* RPC support for OVS Plugin and Agent
+* Initial implemention of MetaPlugin
+* RPC support for Linux Bridge Plugin and Agent
+* Exempt openstack-common from pep8 check
+* fix bug lp:1025526,update iniparser.py to accept empty value
+* Introduce files from openstack common
+* fix bug lp:1019230,update rpc from openstack-common
+* implement dhcp agent for quantum
+* Use setuptools git plugin for file inclusion
+* Remove paste configuration details to a seperate file. blueprint use-common-cfg
+* Implements the blueprint use-common-cfg for the quantum service. More specifically uses global CONF for the quantum.conf file
+* Add authZ through incorporation of policy checks
+* Bug #1013967 - Quantum is breaking on tests with pep 1.3
+* Use openstack.common.exception
+* API v2: mprove validation of post/put, rename few attributes
+* Add API v2 support
+* Fix up test running to match jenkins expectation
+* Add build_sphinx options
+* Quantum should use openstack.common.jsonutils
+* Remove hardcoded version for pep8 from tools/test-requires
+* Quantum should use openstack.common.importutils
+* PEP8 fixes
+* Bug #1002605
+* Parse linuxbridge plugins using openstack.common.cfg
+* Add HACKING.rst to tarball generation bug 1001220
+* Include AUTHORS in release package
+* Change Resource.__call__() to not leak internal errors
+* Removed simplejson from pip-requires
+* Remove dependency on python-quantumclient
+* Add sphinx to the test build deps
+* Add HACKING.rst coding style doc
+* bug 963152: add a few missing files to sdist tarball
+* Fix path to python-quantumclient
+* Split out pip requires and aligned tox file
+* Fix missing files in sdist package [bug 954906]
+* Downgraded required version of WebOb to 1.0.8
+* more files missing in sdist tarball
+* make sure pip-requires is included in setup.py sdist
+* remove pep8 and strict lxml version from setup.py
+* plugin: introduce ryu plugin
+* bug 934459: pip no longer supports -E
+* blueprint quantum-ovs-tunnel-agent
+* Initial commit: nvp plugin
+* Cleanup the source distribution
+* blueprint quantum-linux-bridge-plugin
+* Remove quantum CLI console script
+* Bug 925372: remove deprecated webob attributes (and also specify stable webob version in pip-requires)
+
+essex-3
+-------
+
+* Make tox config work
+* Pin versions to standard versions
+* Split out quantum.client and quantum.common
+* Quantum was missing depend on lxml
+* moving batch config out of quantum-server repo
+* Getting ready for the client split
+* Removed erroneous print from setup.py
+* Base version.py on glance
+* Fix lp bug 897882
+* Install a good version of pip in the venv
+* Rename .quantum-venv to .venv
+* Remove plugin pip-requires
+
+essex-2
+-------
+
+* Bug #890028
+* Fix for bug 900316
+* Second round of packaging changes
+* Changes to make pip-based tests work with jenkins
+* Fix for bug 888811
+* Fix for Bug #888820 - pip-requires file support for plugins
+
+essex-1
+-------
+
+* blueprint quantum-packaging
+* Add .gitreview config file for gerrit
+* Add code-coverage support to run_tests.sh (lp860160)
+
+2011.3
+------
+
+* Add rfc.sh to help with gerrit workflow
+* merge tyler's unit tests for cisco plugin changes lp845140
+* merge salv's no-cheetah CLI branch lp 842190
+* merge sumit's branch for lp837752
+* Merging latest from lp:quantum
+* Merging lo:~salvatore-orlando/quantum/quantum-api-auth
+* Updating CLI for not using Cheetah anymore. Now using a mechanism based on Python built-in templates
+* Merging Sumit's changes including fixes for multinic support, and CLI module for working with extensions
+* Merging from Cisco branch
+* Merging from lp:quantum
+* merge cisco consolidated plugin changes
+* Merging lp:~salvatore-orlando/quantum/bug834449
+* merge trunk
+* Merging from lp:quantum
+* merge salvatore's new cli code
+* Addressing comments from Dan
+* Merging from quantum
+* merge cisco extensions branch
+* Merging from Sumit's branch, changes to VIF-driver and Scheduler; extension action names have been changed in response to Salvatore's review comments in the extensions branch review
+* Syncing with Cisco extensions branch
+* Merging from Sumit's branch, import ordering related changes
+* Merging the Cisco branch
+* Finishing cli work Fixing bug with XML deserialization
+* Merging lp:~salvatore-orlando/quantum/quantum-api-alignment
+* merge latest quantum branch and resolve conflicts
+* Merging lp:~asomya/quantum/lp833163 Fix for Bug #833163: Pep8 violations in recent packaging changes that were merged into trunk (Critical)
+* PEP8 fixes for setup.py
+* Merging lp:~cisco-openstack/quantum/802dot1qbh-vifdriver-scheduler
+* Merging lp:~cisco-openstack/quantum/l2network-plugin-persistence
+* Merging lp:quantum
+* merging with lp:quantum
+* Making Keystone version configurable
+* Merging branch: lp:~danwent/quantum/test-refactor
+* Syncing with lp:quantum
+* Merging fixes and changes batch-config script. Thanks lp:danwent !
+* Merging lp:~asomya/quantum/lp824145 Fix for Bug#824145 : Adding a setup script for quantum
+* merge trunk pep8 fixes adapting CLI to API v1.0 Fixing wsgi to avoid failure with extensions
+* merge trunk
+* Pulling in changes from lp:quantum
+* Merging Cisco's contribution to Quantum. Thanks to various folks at Cisco Systems, Quantum will have plugins to integrate with Cisco UCS blade servers using 802.1Qbh, Cisco Nexus family of switches and the ability for Quantum plugin to have multiple switches/devices within a single Quantum plugin
+* Merging from Sumit's branch pylint fixes and incorporating review comments
+* Mergin from cisco brach
+* Merging from lp:quantum
+* Introducting cheetah Updating list_nets in CLI Writing unit tests for list_nets Stubbing out with FakeConnection now
+* Merging quantum extenions framework into trunk. Thanks rajaram vinkesh, deepak & santhosh for the great work!
+* lp Bug#824145 : Adding a setup script for quantum
+* skeleton for cli unit tests
+* merge trunk
+* Merged quantum trunk
+* - Adding setup script
+* force batch_config.py to use json, as XML has issues (see bug: 798262)
+* update batch_config.py to use new client lib, hooray for deleting code
+* Merging changes addressing Bug # 802772. Thanks lp:danwent !
+* Merging bugfix for Bug 822890 - Added License file for Quantum code distribution
+* L2 Network Plugin Framework merge
+* Adding Apache Version 2.0 license file. This is the official license agreement under which Quantum code is available to the Open Source community
+* merge
+* merge heckj's pip-requires fixes
+* updates to pip-requires for CI
+* Merged quantum trunk
+* Merging changes from lp:quantum
+* Completing API spec alignment Unit tests aligned with changes in the API spec
+* Merging the brand new Quantum-client-library feature
+* Merging lp:quantum updates
+* persistence of l2network & ucs plugins using mysql - db_conn.ini - configuration details of making a connection to the database - db_test_plugin.py - contains abstraction methods for storing database values in a dict and unit test cases for DB testing - l2network_db.py - db methods for l2network models - l2network_models.py - class definitions for the l2 network tables - ucs_db.py - db methods for ucs models - ucs_models.py - class definition for the ucs tables dynamic loading of the 2nd layer plugin db's based on passed arguments Create, Delete, Get, Getall, Update database methods at - Quantum, L2Network and Ucs Unit test cases for create, delete, getall and update operations for L2Network and Ucs plugins pep8 checks done branch based off revision 34 plugin-framework
+* Merged from trunk
+* merged the latest changes from plugin-framework branch - revision 39 conforming to the new cisco plugin directory structure and moving all db related modules into cisco/db folder updated db_test_plugin.py - added import of cisco constants module - added LOG.getLogger for logging component name - updated import module paths for l2network_models/db and ucs_models/db to use the new directory structure - updated (rearranged) imports section to obey openstack alphabetical placement convention updated db_conn.ini - updated database name from cisco_naas to quantum_l2network unit test cases ran successfully and pep8 checks done again
+* merge branch for to fix bug817826
+* Merging the latest changes from lp:quantum
+* fix bug 817826 and similar error in batch_config.py
+* merge Salvatore's api branch with fixes for tests. Tweaking branch to remove unwanted bin/quantum.py as part of merge
+* Santhosh/Rajaram|latest merge from quantum and made extensions use options to load plugin
+* Apply fix for bug #797419 merging lp:~salvatore-orlando/quantum/bug797419
+* Merging branch lp:~netstack/quantum/quantum-unit-tests
+* Merged from quantum trunk
+* Adapated plugin infrastructure to allow API to pass options to plugins Now using in-memory sqlite db for tests on FakePlugin teardown() now 'resets' the in-memory db Adding unit tests for APIs
+* Adding Routes>=1.12.3 to tools/pip-requires
+* Merging dan wendlandt's bugfixes for Bug #800466 and improvements that enable Quantum to seamlessly run on KVM!
+* more pep8 goodness
+* refactor batch_config, allow multiple attaches with the empty string
+* merge and pep8 cleanup
+* Merging latest changes from parent repo - lp:network-service , Parent repo had approved merge proposal for merging lp:~santhom/network-service/quantum_testing_framework , which has now been merged into lp:network-service
+* Merging pep8 and functional test related changes lp:~santhom/network-service/quantum_testing_framework branch
+* add example to usage string for batch_config.py
+* Bug fixes and clean-up, including supporting libvirt
+* Santhosh/Vinkesh | Added the testing framework. Moved the smoketest to tests/functional
+* Pushing initial started code based on Glance project and infrstructure work done by the melange team
+* Merging in latest changes from lp:quantum
